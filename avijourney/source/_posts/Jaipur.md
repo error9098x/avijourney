@@ -30,7 +30,7 @@ Learn traditional Rajasthani recipes and cooking techniques during an immersive 
 
 See Jaipur from a new perspective on an early morning hot air balloon ride. Float peacefully over hilltop forts, palaces, and temples as the city wakes up below you.
 
-### Vintage Jeep Safari
+### Vintage Jeep Safari :)
 
 Bounce through villages and rural landscapes outside the city on an off-road safari in a classic vintage jeep. Our knowledgeable guides will take you to see rural life, artisans, and beautiful scenery.
 
