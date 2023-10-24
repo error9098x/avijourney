@@ -133,7 +133,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: http://github.com/probberechts
+  projects: http://github.com/error9098x
   LINK_NAME: URL
 ```
 
