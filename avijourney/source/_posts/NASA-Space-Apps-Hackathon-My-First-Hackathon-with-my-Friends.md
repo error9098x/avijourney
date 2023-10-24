@@ -8,7 +8,7 @@ Created: October 24, 2023 6:45 PM
 
 ## 💫 How it all started
 
-As far as I remember, I just saw about it on the hack2skill website. It is a company that seems pretty big in the hackathon and tech community in India. They even conducted my friend's interview for GDSC Lead, but that's a story for another day! *"[hack2skill.com](https://www.notion.so/hack2skill.com)"*
+As far as I remember, I just saw about it on the hack2skill website. It is a company that seems pretty big in the hackathon and tech community in India. They even conducted my interview for GDSC Lead, but that's a story for another day! *"[hack2skill.com](https://www.notion.so/hack2skill.com)"*
 
 Yeah so I just saw the notice for the hackathon there. It's an international hackathon by NASA with regionals happening in Noida. It looked super cool! At the time I was tinkering with some Godot game dev and wanted to make a space sim for education. So I contacted my friends Rupam Barui (Rupa), Shiv Avasthi, and Digvijay (Diggy) to see if they wanted to join.
 
