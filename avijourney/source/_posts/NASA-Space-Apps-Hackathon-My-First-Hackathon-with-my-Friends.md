@@ -34,24 +34,21 @@ Anyway, that's enough for this post. I've got a ton of exams coming up now that 
 
 ## 💾 Here’s what all media I found: 
 
-![Finally, its over !](https://media.discordapp.net/attachments/1166369743159164948/1166370267577196555/PXL_20231008_074447432.jpg?ex=654a3df5&is=6537c8f5&hm=97dec336d5e5a4097d94016eac52b1e04c9f144f3bcd475b4ea7707983346824&=&width=526&height=702)
+
 
 Finally, its over !
 
-![Some Swags 😋](https://media.discordapp.net/attachments/1166369743159164948/1166370266159525918/PXL_20231007_040118323.jpg?ex=654a3df5&is=6537c8f5&hm=f5d678f5688e043f408e7fc8d55dce5fb8a99014d18b7bcb0781fdc173b5a966&=&width=664&height=498)
+![Some Swags 😋](https://cdn.gilcdn.com/ContentMediaGenericFiles/cd509141068c90bd413c8fb4863b4884-Full.webp?width=664&height=498)
 
 Some Swags 😋
 
 <video src="https://img.guildedcdn.com/ContentMediaGenericFiles/531cc3ed93a78c977d24df22ae65119d-Full.mp4?w=3840&h=2160" width="480" height="360" controls></video>
 
 
-![me dead after no sleep](https://media.discordapp.net/attachments/1166369743159164948/1166370267057115167/PXL_20231008_031255889.NIGHT.jpg?ex=654a3df5&is=6537c8f5&hm=bfa03c8199b74d9c0b4708eb2b297b564bf30ae1ec14914eef9ce1a8c33581f7&=&width=720&height=541)
 
-me dead after no sleep
 
-![Me, Rupam and Digvijay ](https://media.discordapp.net/attachments/1166369743159164948/1166370266650255360/PXL_20231007_043743260.jpg?ex=654a3df5&is=6537c8f5&hm=b57fcdce03440562a281a586f3bf454cc4a05a2f6fc5b6bbfbe9e93c11e8b365&=&width=720&height=541)
+![Me, Rupam and Digvijay ](https://cdn.gilcdn.com/ContentMediaGenericFiles/ff658e7cb51a2014bf51ca79c73d4074-Full.webp?w=1600&h=1200)
 
-Me, Rupam and Digvijay 
 
 <video src="https://img.guildedcdn.com/ContentMediaGenericFiles/84223347a0c2052c7ddd4b98a94d85e3-Full.mp4?w=3840&h=2160" width="480" height="360" controls></video>
 
