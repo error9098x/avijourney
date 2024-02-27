@@ -8,6 +8,7 @@ tags:
 categories:
   - [Journey]
 ---
+Created: February 27, 2024 9:15 PM
 
 Today, I'm thrilled to share with you our journey of participating in and winning the Toyota Tsusho Systems CTF. It was an exhilarating experience that tested our problem-solving skills, technical knowledge, and team synergy.
 
