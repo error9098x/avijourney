@@ -31,24 +31,24 @@ nav:
 social_links:
   -
     icon: github
-    link: http://github.com/error9098x
+    link: https://github.com/error9098x
   -
-    icon: twitter
-    link: /
-  -
-    icon: facebook
-    link: /
-  -
-    icon: mail
-    link: mailto:procodecavi@gmail.com
-  -
-    icon: mastodon
-    label: mastodon.social
-    link: 
-  -
-    icon: mastodon
-    label: fosstodon.org
-    link: 
+    icon: linkedin
+    link: https://linkedin/in/codeavi
+  # -
+  #   icon: facebook
+  #   link: /
+  # -
+  #   icon: mail
+  #   link: mailto:procodecavi@gmail.com
+  # -
+  #   icon: mastodon
+  #   label: mastodon.social
+  #   link: 
+  # -
+  #   icon: mastodon
+  #   label: fosstodon.org
+  #   link: 
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
