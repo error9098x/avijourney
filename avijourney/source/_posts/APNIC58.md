@@ -48,4 +48,6 @@ _Victory! Winning the treasure hunt was the cherry on top_
 
 One of the best things about APNIC is their commitment to open knowledge sharing. All the lecture slides and labs from the workshops are freely available to everyone. You can find the course materials I used at [APNIC Academy Events](https://academy.apnic.net/en/events?id=a0BOc000000O9VBMA0).
 
+What's even better is that APNIC provides free self-paced courses that anyone can take at [APNIC Academy](https://academy.apnic.net/en/online-courses). I particularly love their hands-on virtual labs - they're amazing! The lab environment is so well designed; you can easily switch between SSH machines when working with multiple virtual devices, and everything is set up by default. It's incredible that such high-quality content is available for free. If you're interested in networking or security, definitely check out their [virtual labs](https://academy.apnic.net/en/virtual-labs).
+
 This experience went far beyond technical learning - it was about understanding the human side of internet governance and meeting the amazing people who keep our digital world running smoothly. I'm grateful for this opportunity and excited to apply everything I've learned in my future endeavors in the internet governance space.
