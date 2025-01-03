@@ -18,20 +18,27 @@ Before diving into my experience, let me share something interesting. Before ICA
 
 ## Understanding ICANN's Structure
 
-<div class="image-wrapper" style="position: relative;">
-<img
-src="https://s6.imgcdn.dev/pMIKN.webp"
-class="placeholder"
-style="position: absolute; top: 0; left: 0; width: 100%; filter: blur(10px);"
-alt="ICANN Structure">
-
-<img
-src="https://s6.imgcdn.dev/pMNOq.webp"
-class="full-image"
-style="opacity: 0; transition: opacity 0.3s;"
-onload="this.style.opacity='1'; this.previousElementSibling.style.opacity='0';"
-alt="ICANN Structure">
+<div class="image-wrapper">
+  <img
+    src="https://s6.imgcdn.dev/pMIKN.webp"
+    data-src="https://s6.imgcdn.dev/pMNOq.webp"
+    class="lazy"
+    alt="ICANN Structure"
+  />
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const lazyImages = document.querySelectorAll("img.lazy");
+  
+  lazyImages.forEach(img => {
+    const highRes = new Image();
+    highRes.src = img.dataset.src;
+    highRes.onload = function() {
+      img.src = highRes.src;
+    };
+  });
+});
+</script>
 
 Looking at the chart, you'll see [ICANN](https://www.icann.org/) in the center. They're the ones who keep the internet's naming and numbering systems working smoothly. The Board oversees everything, making sure ICANN follows its bylaws, while ICANN Org staff handle the day-to-day operations. Bylaws are basically the rules that ICANN has to follow - they define ICANN's mission, core values, and governance structure. These bylaws ensure transparency and accountability in ICANN's operations, and can only be changed through a careful community consultation process that requires broad support.
 
