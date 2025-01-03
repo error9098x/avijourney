@@ -48,11 +48,11 @@ Looking at the chart, you'll see [ICANN](https://www.icann.org/) in the center. 
 The Advisory Committees branch out from the center - these are the groups that give expert advice on different aspects of internet governance:
 
 - The [At-Large Advisory Committee (ALAC)](https://atlarge.icann.org/) represents internet users like you and me. They work through regional organizations called RALOs:
-  - [APRALO](https://atlarge-apralo.icann.org/) for Asia Pacific (where I'm from)
-  - [AFRALO](https://atlarge-afralo.icann.org/) for Africa
-  - [EURALO](https://atlarge-euralo.icann.org/) for Europe
-  - [NARALO](https://atlarge-naralo.icann.org/) for North America
-  - [LACRALO](https://atlarge-lacralo.icann.org/) for Latin America and Caribbean
+    - [APRALO](https://atlarge.icann.org/ralos/apralo) for Asia Pacific (where I'm from)  
+    - [AFRALO](https://atlarge.icann.org/ralos/afralo) for Africa  
+    - [EURALO](https://atlarge.icann.org/ralos/euralo) for Europe  
+    - [NARALO](https://atlarge.icann.org/ralos/naralo) for North America  
+    - [LACRALO](https://atlarge.icann.org/ralos/lacralo) for Latin America and Caribbean  
 
 - The [Governmental Advisory Committee (GAC)](https://gac.icann.org/) brings government perspectives to policy discussions
 - The [Security and Stability Advisory Committee (SSAC)](https://www.icann.org/groups/ssac) and [Root Server System Advisory Committee (RSSAC)](https://www.icann.org/groups/rssac) focus on keeping the internet's infrastructure secure and stable
