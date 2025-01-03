@@ -5,8 +5,12 @@ categories: [journey]
 tags: [internet-governance, icann, conference, nextgen]
 ---
 
-![ICANN81 Stand](https://s6.imgcdn.dev/pMOZd.png){width="600"}
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![ICANN81 Stand](https://s6.imgcdn.dev/pMOZd.png)
 _At the ICANN81 stand in Istanbul_
+
+</div>
 
 Hello everyone! For those who've been following my blogs ❤️, you know me, but for newcomers - I'm an undergraduate student studying cybersecurity. You can learn more about me on my [about page](https://avijourney.vercel.app/about/). 
 
@@ -18,7 +22,11 @@ Before diving into my experience, let me share something interesting. Before ICA
 
 ## Understanding ICANN's Structure
 
-![ICANN Structure](https://s6.imgcdn.dev/pMNOq.webp){width="700"}
+<div style="max-width: 700px; max-height: 500px; margin: 0 auto;">
+
+![ICANN Structure](https://s6.imgcdn.dev/pMNOq.webp)
+
+</div>
 
 Looking at the chart, you'll see [ICANN](https://www.icann.org/) in the center. They're the ones who keep the internet's naming and numbering systems working smoothly. The Board oversees everything, making sure ICANN follows its bylaws, while ICANN Org staff handle the day-to-day operations. Bylaws are basically the rules that ICANN has to follow - they define ICANN's mission, core values, and governance structure. These bylaws ensure transparency and accountability in ICANN's operations, and can only be changed through a careful community consultation process that requires broad support.
 
@@ -66,8 +74,12 @@ Starting at day 0, we had a lot of "How It Works" sessions - really informative 
 
 After the sessions, it was time to head out for dinner sponsored by our mentor Imran :)) - amazing seaside dinner! The only disturbance was the cats >:( The amount of cats in Istanbul is astonishingly high.
 
-![Dinner by the sea](https://s6.imgcdn.dev/pMSuS.png){width="600"}
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![Dinner by the sea](https://s6.imgcdn.dev/pMSuS.png)
 _Seaside dinner with NextGenners and our mentor_
+
+</div>
 
 ### Day 1: Blockchain and APRALO
 Next day, we had more "How It Works" sessions, including Blockchain Name Technologies by Paul Hoffman, who is the chair in post-quantum use in protocols in IETF and has been actively involved for decades. He described how blockchain and the DNS intersect and interact. After that, I went to the APRALO session about planning for 2025 and achievements.
@@ -81,34 +93,54 @@ Later, I attended the Joint ICANN Board and CSG meeting where I got to witness f
 
 After all the sessions, I took some time to explore the city highlights:
 
-![Quick selfie](https://s6.imgcdn.dev/pMAPM.png){width="400"}
+<div style="max-width: 300px; max-height: 400px; margin: 0 auto;">
+
+![Quick selfie](https://s6.imgcdn.dev/pMAPM.png)
 _A quick selfie before venturing out_
 
-![Blue Mosque](https://s6.imgcdn.dev/pMr1C.png){width="600"}
+</div>
+
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![Blue Mosque](https://s6.imgcdn.dev/pMr1C.png)
 _Inside the magnificent Blue Mosque_
+
+</div>
 
 The evening concluded with a visit to the Atatürk Cultural Center for an opera performance. It was my first time seeing opera, and to my surprise, they played Vivaldi's Four Seasons, which I instantly recognized. Though I'll admit, I was so sleepy that I probably dozed through 50% of the performance - it was quite desensitizing!
 
 ### Day 3: Presentation Day and Wiki Editing
 This was my presentation day. Each NextGenner had to present about something, and I chose the topic "DNS Security and AI Potential," where I worked on DNS-based Network monitoring system using LLMs. The day before, I quickly reviewed my slides - I didn't prepare what to say specifically, just had my slides and code ready. I checked if everything was running and working, and pushed it to GitHub.
 
-![Presentation](https://s6.imgcdn.dev/pMBmH.png){width="600"}
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![Presentation](https://s6.imgcdn.dev/pMBmH.png)
 _Presenting my research on DNS Security and AI_
+
+</div>
 
 After my presentation, I attended a session on editing the ICANNWiki - ICANN's wiki that contains content about domain names and people in ICANN. During the session, I edited content about the .in domain, and we got chocolate and cake as a treat! :p
 
 Then I joined an interesting discussion about SSAC implementation plans for name collision and the framework. After that, I went to the ISOC Dinner, where we had an evening session giving feedback to ISOC for their future plans.
 
-![ISOC Dinner](https://s6.imgcdn.dev/pM7ri.png){width="600"}
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![ISOC Dinner](https://s6.imgcdn.dev/pM7ri.png)
 _Evening at the ISOC Dinner_
+
+</div>
 
 ### Day 4: Board Interaction and Technical Workshops
 The NextGenners and Fellows had an interactive session with the ICANN Board. Lots of great questions were asked about building on contributions, their experiences, and feedback. Then I went to the DNSSEC and Security workshop - it was very technical and dove into the core of DNS, including some proposed ideas to mitigate existing issues in DNSSEC.
 
 Later, I attended the Netmission dinner with other Netmission alumni and Edmon Chung, CEO of DotAsia and ICANN Board Member from NomCom. It was great to talk with him and gain more knowledge about ICANN.
 
-![Netmission dinner](https://s6.imgcdn.dev/pM0i2.png){width="600"}
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![Netmission dinner](https://s6.imgcdn.dev/pM0i2.png)
 _Networking at the Netmission dinner_
+
+</div>
 
 ### Final Day: Wrap-up and Townhall
 The last day included wrap-up sessions where we shared our takeaways, and an experience townhall session - an open mic session where people could ask the ICANN board anything related to internet governance (though the board only answered questions within ICANN's remit).
@@ -122,5 +154,9 @@ If you're interested in getting involved with ICANN, check out:
 
 See you in the next blog! ✌️
 
-![Bonus pic](https://s6.imgcdn.dev/pMvWe.png){width="600"}
+<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
+
+![Bonus pic](https://s6.imgcdn.dev/pMvWe.png)
 _A moment of relaxation during the busy conference_
+
+</div>
