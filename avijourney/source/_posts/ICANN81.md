@@ -1,16 +1,22 @@
 ---
-title: My Journey at ICANN81 - From Chaos to Clarity
+title: My ICANN81 Experience
 date: 2025-01-04
 categories: [journey]
 tags: [internet-governance, icann, conference, nextgen]
 ---
 
-<div style="max-width: 600px; margin: 0 auto; text-align:center;">
+<div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMOZd.png" 
+    src="https://s6.imgcdn.dev/pMOZd.png"
     alt="ICANN81 Stand" 
-    style="width:100%; height:auto;"
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
   />
+  <em>At the ICANN81 stand in Istanbul</em>
 </div>
 
 Hello everyone! For those who've been following my blogs ❤️, you know me, but for newcomers - I'm an undergraduate student studying cybersecurity. You can learn more about me on my [about page](https://avijourney.vercel.app/about/). 
@@ -23,10 +29,17 @@ Before diving into my experience, let me share something interesting. Before ICA
 
 ## Understanding ICANN's Structure
 
-<div style="max-width: 700px; max-height: 500px; margin: 0 auto;">
-
-![ICANN Structure](https://s6.imgcdn.dev/pMNOq.webp)
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMNOq.webp"
+    alt="ICANN Structure" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
 </div>
 
 Looking at the chart, you'll see [ICANN](https://www.icann.org/) in the center. They're the ones who keep the internet's naming and numbering systems working smoothly. The Board oversees everything, making sure ICANN follows its bylaws, while ICANN Org staff handle the day-to-day operations. Bylaws are basically the rules that ICANN has to follow - they define ICANN's mission, core values, and governance structure. These bylaws ensure transparency and accountability in ICANN's operations, and can only be changed through a careful community consultation process that requires broad support.
@@ -75,11 +88,18 @@ Starting at day 0, we had a lot of "How It Works" sessions - really informative 
 
 After the sessions, it was time to head out for dinner sponsored by our mentor Imran :)) - amazing seaside dinner! The only disturbance was the cats >:( The amount of cats in Istanbul is astonishingly high.
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![Dinner by the sea](https://s6.imgcdn.dev/pMSuS.png)
-_Seaside dinner with NextGenners and our mentor_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMSuS.png"
+    alt="Dinner by the sea" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>Seaside dinner with NextGenners and our mentor</em>
 </div>
 
 ### Day 1: Blockchain and APRALO
@@ -94,18 +114,32 @@ Later, I attended the Joint ICANN Board and CSG meeting where I got to witness f
 
 After all the sessions, I took some time to explore the city highlights:
 
-<div style="max-width: 300px; max-height: 400px; margin: 0 auto;">
-
-![Quick selfie](https://s6.imgcdn.dev/pMAPM.png)
-_A quick selfie before venturing out_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMAPM.png"
+    alt="Quick selfie" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>A quick selfie before venturing out</em>
 </div>
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![Blue Mosque](https://s6.imgcdn.dev/pMr1C.png)
-_Inside the magnificent Blue Mosque_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMr1C.png"
+    alt="Blue Mosque" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>Inside the magnificent Blue Mosque</em>
 </div>
 
 The evening concluded with a visit to the Atatürk Cultural Center for an opera performance. It was my first time seeing opera, and to my surprise, they played Vivaldi's Four Seasons, which I instantly recognized. Though I'll admit, I was so sleepy that I probably dozed through 50% of the performance - it was quite desensitizing!
@@ -113,22 +147,36 @@ The evening concluded with a visit to the Atatürk Cultural Center for an opera 
 ### Day 3: Presentation Day and Wiki Editing
 This was my presentation day. Each NextGenner had to present about something, and I chose the topic "DNS Security and AI Potential," where I worked on DNS-based Network monitoring system using LLMs. The day before, I quickly reviewed my slides - I didn't prepare what to say specifically, just had my slides and code ready. I checked if everything was running and working, and pushed it to GitHub.
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![Presentation](https://s6.imgcdn.dev/pMBmH.png)
-_Presenting my research on DNS Security and AI_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMBmH.png"
+    alt="Presentation" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>Presenting my research on DNS Security and AI</em>
 </div>
 
 After my presentation, I attended a session on editing the ICANNWiki - ICANN's wiki that contains content about domain names and people in ICANN. During the session, I edited content about the .in domain, and we got chocolate and cake as a treat! :p
 
 Then I joined an interesting discussion about SSAC implementation plans for name collision and the framework. After that, I went to the ISOC Dinner, where we had an evening session giving feedback to ISOC for their future plans.
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![ISOC Dinner](https://s6.imgcdn.dev/pM7ri.png)
-_Evening at the ISOC Dinner_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pM7ri.png"
+    alt="ISOC Dinner" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>Evening at the ISOC Dinner</em>
 </div>
 
 ### Day 4: Board Interaction and Technical Workshops
@@ -136,11 +184,18 @@ The NextGenners and Fellows had an interactive session with the ICANN Board. Lot
 
 Later, I attended the Netmission dinner with other Netmission alumni and Edmon Chung, CEO of DotAsia and ICANN Board Member from NomCom. It was great to talk with him and gain more knowledge about ICANN.
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![Netmission dinner](https://s6.imgcdn.dev/pM0i2.png)
-_Networking at the Netmission dinner_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pM0i2.png"
+    alt="Netmission dinner" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>Networking at the Netmission dinner</em>
 </div>
 
 ### Final Day: Wrap-up and Townhall
@@ -155,9 +210,16 @@ If you're interested in getting involved with ICANN, check out:
 
 See you in the next blog! ✌️
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![Bonus pic](https://s6.imgcdn.dev/pMvWe.png)
-_A moment of relaxation during the busy conference_
-
+<div style="text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMvWe.png"
+    alt="Bonus pic" 
+    style="
+      max-width: 90%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+    "
+  />
+  <em>A moment of relaxation during the busy conference</em>
 </div>
