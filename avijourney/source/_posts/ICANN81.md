@@ -1,5 +1,5 @@
 ---
-title: My ICANN81 Experience
+title: My ICANN81 Experience in Istanbul
 date: 2025-01-04
 categories: [journey]
 tags: [internet-governance, icann, conference, nextgen]
