@@ -65,7 +65,7 @@ The [Generic Names Supporting Organization (GNSO)](https://gnso.icann.org/) hand
 The Commercial Stakeholder Group (CSG) includes:
 - The [Business Constituency (BC)](https://www.bizconst.org/) representing business users
 - The [Internet Service Providers Constituency (ISPCP)](https://ispcp.info/) for network operators
-- The [Intellectual Property Constituency (IPC)](https://ipc.icann.org/) protecting trademark interests
+- The [Intellectual Property Constituency (IPC)](https://www.ipconstituency.org/) protecting trademark interests
 
 The Non-Commercial Stakeholder Group (NCSG) represents non-profits, academics, and civil society organizations. They work to protect public interest and civil liberties in domain name policies.
 
