@@ -5,7 +5,7 @@ categories: [journey]
 tags: [internet-governance, icann, conference, nextgen]
 ---
 
-![ICANN81 Stand](https://s6.imgcdn.dev/pMOZd.png)
+![ICANN81 Stand](https://s6.imgcdn.dev/pMOZd.png){width="600"}
 _At the ICANN81 stand in Istanbul_
 
 Hello everyone! For those who've been following my blogs ❤️, you know me, but for newcomers - I'm an undergraduate student studying cybersecurity. You can learn more about me on my [about page](https://avijourney.vercel.app/about/). 
@@ -18,27 +18,7 @@ Before diving into my experience, let me share something interesting. Before ICA
 
 ## Understanding ICANN's Structure
 
-<div class="image-wrapper">
-  <img
-    src="https://s6.imgcdn.dev/pMIKN.webp"
-    data-src="https://s6.imgcdn.dev/pMNOq.webp"
-    class="lazy"
-    alt="ICANN Structure"
-  />
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-  const lazyImages = document.querySelectorAll("img.lazy");
-  
-  lazyImages.forEach(img => {
-    const highRes = new Image();
-    highRes.src = img.dataset.src;
-    highRes.onload = function() {
-      img.src = highRes.src;
-    };
-  });
-});
-</script>
+![ICANN Structure](https://s6.imgcdn.dev/pMNOq.webp){width="700"}
 
 Looking at the chart, you'll see [ICANN](https://www.icann.org/) in the center. They're the ones who keep the internet's naming and numbering systems working smoothly. The Board oversees everything, making sure ICANN follows its bylaws, while ICANN Org staff handle the day-to-day operations. Bylaws are basically the rules that ICANN has to follow - they define ICANN's mission, core values, and governance structure. These bylaws ensure transparency and accountability in ICANN's operations, and can only be changed through a careful community consultation process that requires broad support.
 
@@ -86,7 +66,7 @@ Starting at day 0, we had a lot of "How It Works" sessions - really informative 
 
 After the sessions, it was time to head out for dinner sponsored by our mentor Imran :)) - amazing seaside dinner! The only disturbance was the cats >:( The amount of cats in Istanbul is astonishingly high.
 
-![Dinner by the sea](https://s6.imgcdn.dev/pMSuS.png)
+![Dinner by the sea](https://s6.imgcdn.dev/pMSuS.png){width="600"}
 _Seaside dinner with NextGenners and our mentor_
 
 ### Day 1: Blockchain and APRALO
@@ -101,10 +81,10 @@ Later, I attended the Joint ICANN Board and CSG meeting where I got to witness f
 
 After all the sessions, I took some time to explore the city highlights:
 
-![Quick selfie](https://s6.imgcdn.dev/pMAPM.png)
+![Quick selfie](https://s6.imgcdn.dev/pMAPM.png){width="400"}
 _A quick selfie before venturing out_
 
-![Blue Mosque](https://s6.imgcdn.dev/pMr1C.png)
+![Blue Mosque](https://s6.imgcdn.dev/pMr1C.png){width="600"}
 _Inside the magnificent Blue Mosque_
 
 The evening concluded with a visit to the Atatürk Cultural Center for an opera performance. It was my first time seeing opera, and to my surprise, they played Vivaldi's Four Seasons, which I instantly recognized. Though I'll admit, I was so sleepy that I probably dozed through 50% of the performance - it was quite desensitizing!
@@ -112,14 +92,14 @@ The evening concluded with a visit to the Atatürk Cultural Center for an opera 
 ### Day 3: Presentation Day and Wiki Editing
 This was my presentation day. Each NextGenner had to present about something, and I chose the topic "DNS Security and AI Potential," where I worked on DNS-based Network monitoring system using LLMs. The day before, I quickly reviewed my slides - I didn't prepare what to say specifically, just had my slides and code ready. I checked if everything was running and working, and pushed it to GitHub.
 
-![Presentation](https://s6.imgcdn.dev/pMBmH.png)
+![Presentation](https://s6.imgcdn.dev/pMBmH.png){width="600"}
 _Presenting my research on DNS Security and AI_
 
 After my presentation, I attended a session on editing the ICANNWiki - ICANN's wiki that contains content about domain names and people in ICANN. During the session, I edited content about the .in domain, and we got chocolate and cake as a treat! :p
 
 Then I joined an interesting discussion about SSAC implementation plans for name collision and the framework. After that, I went to the ISOC Dinner, where we had an evening session giving feedback to ISOC for their future plans.
 
-![ISOC Dinner](https://s6.imgcdn.dev/pM7ri.png)
+![ISOC Dinner](https://s6.imgcdn.dev/pM7ri.png){width="600"}
 _Evening at the ISOC Dinner_
 
 ### Day 4: Board Interaction and Technical Workshops
@@ -127,7 +107,7 @@ The NextGenners and Fellows had an interactive session with the ICANN Board. Lot
 
 Later, I attended the Netmission dinner with other Netmission alumni and Edmon Chung, CEO of DotAsia and ICANN Board Member from NomCom. It was great to talk with him and gain more knowledge about ICANN.
 
-![Netmission dinner](https://s6.imgcdn.dev/pM0i2.png)
+![Netmission dinner](https://s6.imgcdn.dev/pM0i2.png){width="600"}
 _Networking at the Netmission dinner_
 
 ### Final Day: Wrap-up and Townhall
@@ -142,5 +122,5 @@ If you're interested in getting involved with ICANN, check out:
 
 See you in the next blog! ✌️
 
-![Bonus pic](https://s6.imgcdn.dev/pMvWe.png)
+![Bonus pic](https://s6.imgcdn.dev/pMvWe.png){width="600"}
 _A moment of relaxation during the busy conference_
