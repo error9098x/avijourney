@@ -60,7 +60,7 @@ The Commercial Stakeholder Group (CSG) includes:
 
 The Non-Commercial Stakeholder Group (NCSG) represents non-profits, academics, and civil society organizations. They work to protect public interest and civil liberties in domain name policies.
 
-The [Country Code Names Support Organization (ccNSO)](https://ccnso.icann.org/) develops policies for country-specific domains like .uk or .in. The Address Supporting Organization (ASO) works with Regional Internet Registries (RIRs) to manage IP addresses. Having just attended APNIC 58, I got to see firsthand how RIRs work. The five RIRs are:
+The [Country Code Names Support Organization (ccNSO)](https://ccnso.icann.org/) develops policies for country-specific domains like .uk or .in. The Address Supporting Organization (ASO) works with Regional Internet Registries (RIRs) to manage IP addresses. Having just attended APNIC 58 (check out my APNIC Blog [here](https://avijourney.vercel.app/2024/11/01/APNIC58/)), I got to see firsthand how RIRs work. The five RIRs are:
 - [APNIC](https://www.apnic.net/) for Asia Pacific
 - [AFRINIC](https://afrinic.net/) for Africa
 - [RIPE NCC](https://www.ripe.net/) for Europe
