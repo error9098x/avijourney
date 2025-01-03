@@ -5,11 +5,12 @@ categories: [journey]
 tags: [internet-governance, icann, conference, nextgen]
 ---
 
-<div style="max-width: 600px; max-height: 400px; margin: 0 auto;">
-
-![ICANN81 Stand](https://s6.imgcdn.dev/pMOZd.png)
-_At the ICANN81 stand in Istanbul_
-
+<div style="max-width: 600px; margin: 0 auto; text-align:center;">
+  <img 
+    src="https://s6.imgcdn.dev/pMOZd.png" 
+    alt="ICANN81 Stand" 
+    style="width:100%; height:auto;"
+  />
 </div>
 
 Hello everyone! For those who've been following my blogs ❤️, you know me, but for newcomers - I'm an undergraduate student studying cybersecurity. You can learn more about me on my [about page](https://avijourney.vercel.app/about/). 
