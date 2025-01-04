@@ -1,7 +1,7 @@
 ---
 title: My Term as a GDSC Lead 2023-2024
 date: 2024-08-12
-categories: [leadership]
+categories: [journey]]
 tags: [gdsc, student-club, tech-community]
 ---
 
