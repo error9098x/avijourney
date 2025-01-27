@@ -10,7 +10,7 @@ Since the first semester of my course, I had been trying to create a coding envi
 Me and my peers piloted our first session about basics of web development as a team, and we called ourselves "Dev Team".
 
 <img 
-    src="https://s6.imgcdn.dev/pCjJv.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/dev_team.png"
     alt="Dev Team Logo" 
     style="
       max-width: 90%;
@@ -24,7 +24,7 @@ _Our Dev Team Logo_
 Here's a glimpse of me presenting about publishing websites on Vercel as a free hosting platform. From that experience, I wanted to create a bigger footprint of our work in the college, so I applied for GDSC again, and thankfully got selected as the GDSC lead. We finally got the official status of a student developer club on our campus.
 
 <img 
-    src="https://s6.imgcdn.dev/pC4Cu.jpg"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/gdsc_devteam.JPG"
     alt="Presenting at Dev Team" 
     style="
       max-width: 90%;
@@ -49,7 +49,7 @@ I want to express my gratitude to our incredible core team:
 We managed to secure sponsorship for our college GDSC cups, featuring a really well-made design:
 
 <img 
-    src="https://s6.imgcdn.dev/pCMvq.gif"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/gdsc_cup.gif"
     alt="GDSC NFSU x Interledger Cup" 
     style="
       max-width: 90%;
@@ -63,7 +63,8 @@ _Our custom GDSC cups_
 During my term, we faced numerous challenges - from management issues to budget constraints and exam schedules. However, we moved forward together, conducting sessions successfully. One of our major achievements was completing both Google Study Jams, with over 80 students fully completing all the Google Cloud labs.
 
 <img 
-    src="https://s6.imgcdn.dev/pCC0L.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/gdsc_prize.jpg
+    "
     alt="Swag Distribution" 
     style="
       max-width: 90%;
@@ -79,7 +80,7 @@ _Distributing swags to successful participants_
 Towards the end of my tenure, I was invited to the Google Office in Bangalore for the Google AI Day event. It was an incredible experience meeting other GDSC leads from different campuses, sharing our struggles and experiences.
 
 <img 
-    src="https://s6.imgcdn.dev/pCI3a.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/gdsc_ai_lead.jpg"
     alt="AI Day Booth" 
     style="
       max-width: 90%;
@@ -91,7 +92,7 @@ Towards the end of my tenure, I was invited to the Google Office in Bangalore fo
 _At the Google AI Day booth_
 
 <img 
-    src="https://s6.imgcdn.dev/pCQww.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/gdsc_racheal.jpg"
     alt="With Rachel Francois" 
     style="
       max-width: 90%;
