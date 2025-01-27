@@ -9,14 +9,14 @@ I still remember scrolling through my Twitter feed in March 2024 when I stumbled
 
 For those not familiar with Apache, let me share what I've learned. The Apache Software Foundation (ASF) is a non-profit organization formed in 1999. They follow what's called "The Apache Way" - a set of core beliefs that include collaborative software development, maintaining high-quality software, and ensuring respectful, technical-based interactions. It's really about building a community that creates great software together.
 
-![Day 0 Dinner](https://s6.imgcdn.dev/pDra9.png)
+![Day 0 Dinner](https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/coc_group.jpg)
 *First night in Hangzhou - Getting to know fellow volunteers over dinner*
 
 When I arrived in Hangzhou, I was immediately welcomed by the volunteer community. We had dinner at a duck restaurant (I stuck to limited non-veg options, but the atmosphere was wonderful). As travel assistance recipients, we were both volunteers and conference attendees, which gave us a unique perspective on the event.
 
 The conference kicked off with a welcome session that highlighted Apache's success in China. I was amazed by the number of contributors and projects coming from the region. The conference was organized into different tracks: Monolith & Microservices, Messaging, OLAP & Data, Data Storage, Data Lake, and Streaming. My friend Aditya Malik, a DevOps engineer, helped me navigate through the technical talks.
 
-![At the Conference Booth](https://s6.imgcdn.dev/pDBmT.png)
+![At the Conference Booth](https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/coc_asia_work.jpg)
 *Manning our booth at the conference - spreading the Apache love!*
 
 During the conference, I got exposed to several technical concepts that were new to me. Let me share what I understood from these talks:
@@ -37,12 +37,12 @@ This talk was about moving from Elasticsearch to Apache Doris for log analysis. 
 One of the more fascinating talks was about making AI more accessible using WebAssembly (Wasm). From what I gathered, they're trying to make it possible to run AI models anywhere - whether on your phone, laptop, or server - while keeping it secure and fast. It's like creating a universal translator that helps AI speak any computer's language!
 
 
-![Post-Conference Adventure](https://s6.imgcdn.dev/pDSuD.png)
+![Post-Conference Adventure](https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/coc_shanghai.jpg)
 *My little adventure to Shanghai after the conference*
 
 Though much of the content was new and sometimes daunting, I found myself increasingly fascinated by the world of data pipelines. I realize this is where the future is heading, and I'm excited to learn more about these technologies.
 
-![Group Photo](https://s6.imgcdn.dev/pDvWy.png)
+![Group Photo](https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/coc_asia.jpeg)
 *Last day with all the volunteers and organizers - what an amazing team!*
 
 Looking back, this conference wasn't just about learning technical concepts - it was about experiencing the true spirit of open source communities. I'm grateful for this opportunity and looking forward to diving deeper into the world of data pipelines and Apache projects. The future looks exciting, and I'm ready to be part of it.
