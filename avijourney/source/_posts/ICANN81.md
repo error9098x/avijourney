@@ -7,7 +7,7 @@ tags: [internet-governance, icann, conference, nextgen]
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMOZd.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_welcome.jpg"
     alt="ICANN81 Stand" 
     style="
       max-width: 90%;
@@ -31,7 +31,8 @@ Before diving into my experience, let me share something interesting. Before ICA
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMNOq.webp"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_structure_opt.webp
+    "
     alt="ICANN Structure" 
     style="
       max-width: 90%;
@@ -116,7 +117,7 @@ After all the sessions, I took some time to explore the city highlights:
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMAPM.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_selfie.png"
     alt="Quick selfie" 
     style="
       max-width: 90%;
@@ -130,7 +131,7 @@ After all the sessions, I took some time to explore the city highlights:
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMr1C.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_scouting.jpeg"
     alt="Blue Mosque" 
     style="
       max-width: 90%;
@@ -167,7 +168,8 @@ Then I joined an interesting discussion about SSAC implementation plans for name
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pM7ri.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_isoc.jpg
+    "
     alt="ISOC Dinner" 
     style="
       max-width: 90%;
@@ -212,7 +214,7 @@ See you in the next blog! ✌️
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMvWe.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_lazy.jpg"
     alt="Bonus pic" 
     style="
       max-width: 90%;
