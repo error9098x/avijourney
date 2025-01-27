@@ -91,7 +91,7 @@ After the sessions, it was time to head out for dinner sponsored by our mentor I
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMSuS.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_dinner.jpg"
     alt="Dinner by the sea" 
     style="
       max-width: 90%;
@@ -150,7 +150,7 @@ This was my presentation day. Each NextGenner had to present about something, an
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pMBmH.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/presenting_icann.jpg"
     alt="Presentation" 
     style="
       max-width: 90%;
@@ -188,7 +188,7 @@ Later, I attended the Netmission dinner with other Netmission alumni and Edmon C
 
 <div style="text-align:center;">
   <img 
-    src="https://s6.imgcdn.dev/pM0i2.png"
+    src="https://raw.githubusercontent.com/error9098x/avijourney/main/avijourney/static/images/icann_dinner_2.jpg"
     alt="Netmission dinner" 
     style="
       max-width: 90%;
