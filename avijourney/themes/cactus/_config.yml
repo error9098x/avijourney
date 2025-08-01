@@ -165,6 +165,24 @@ open_graph:
 # Plugins
 ##############################################################################
 
+# Set the color scheme for code highlighting
+# Available schemes: rainbow, tomorrow, github, etc.
+highlight: tomorrow-night
+
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'tomorrow'
+  line_number: true
+  custom_css:
+
+# Mermaid configuration
+mermaid:
+  enable: true
+  version: "8.14.0"
+  options:
+    theme: default
+    startOnLoad: true
+
 # Enable MathJax support for Latex
 mathjax:
   enabled: false

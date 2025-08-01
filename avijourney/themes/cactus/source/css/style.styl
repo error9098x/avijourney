@@ -233,3 +233,46 @@ code
 
 #header-post #actions
   direction: ltr !important
+
+// Mermaid diagram styles
+.mermaid
+  text-align: center
+  margin: 1em 0
+  background: transparent
+  
+  svg
+    max-width: 100%
+    height: auto
+    
+  // Dark theme adjustments
+  if $colors == "dark"
+    .node rect,
+    .node circle,
+    .node ellipse,
+    .node polygon
+      fill: #2d3748
+      stroke: $color-accent-1
+      stroke-width: 2px
+      
+    .edgePath .path
+      stroke: $color-text
+      stroke-width: 2px
+      
+    .edgeLabel
+      background-color: rgba(45, 55, 72, 0.8)
+      color: $color-text
+      
+    text
+      fill: $color-text !important
+      
+    .actor
+      stroke: $color-accent-1
+      fill: #2d3748
+      
+    .messageLine0,
+    .messageLine1
+      stroke: $color-text
+      
+    .labelBox
+      fill: rgba(45, 55, 72, 0.8)
+      stroke: $color-accent-1

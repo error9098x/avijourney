@@ -104,3 +104,11 @@ theme: cactus
 deploy:
   type: ''
 
+# Mermaid Diagram Support
+mermaid:
+  enable: true
+  version: "10.9.0"
+  options:
+    theme: default
+    startOnLoad: true
+
