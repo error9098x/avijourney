@@ -156,7 +156,7 @@ The Swiss AI Initiative built something ambitious. A fully open, multilingual mo
 
 ## Why we ran this benchmark
 
-We're building [NativeAI Guard](https://nativeai.dev), a security layer that filters sensitive data from queries sent to language models. Testing how well different models detect Swiss PII directly informs the design of our filtering pipeline. We need to know which models catch what, where the blind spots are, and what kind of fallback detection is necessary.
+We're building [NativeAI Guard](https://nativeai.ch/en-US/products/nativeai-guard), a security layer that filters sensitive data from queries sent to language models. Testing how well different models detect Swiss PII directly informs the design of our filtering pipeline. We need to know which models catch what, where the blind spots are, and what kind of fallback detection is necessary.
 
 The test dataset and benchmark scripts are open for anyone who wants to reproduce or extend this work.
 
