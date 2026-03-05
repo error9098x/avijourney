@@ -9,7 +9,7 @@
     "server": "hexo server"
   },
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "hexo": {
     "version": "6.3.0"
