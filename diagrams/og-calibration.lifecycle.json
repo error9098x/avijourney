@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "A calibration's life, and the run that locks it",
+    "viewBox": [
+      980,
+      630
+    ],
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "install",
+        "label": "Getting a country installed",
+        "focus": [
+          "not_installed",
+          "installing",
+          "installed",
+          "install_failed"
+        ],
+        "note": "One click, a live log, and a failure view that keeps the log and offers Retry."
+      },
+      {
+        "id": "update",
+        "label": "Staying current",
+        "focus": [
+          "installed",
+          "update_avail",
+          "installing"
+        ],
+        "note": "Every installed calibration is compared against its upstream repository in the background."
+      },
+      {
+        "id": "interlock",
+        "label": "The interlock",
+        "focus": [
+          "installed",
+          "run_active",
+          "update_avail"
+        ],
+        "note": "A running solve holds the country environment, so an update has to wait for it."
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "start": {
+          "label": "new"
+        },
+        "active": {
+          "label": "working"
+        },
+        "waiting": {
+          "label": "waiting"
+        },
+        "success": {
+          "label": "ready"
+        },
+        "failure": {
+          "label": "failed"
+        },
+        "neutral": {
+          "label": "removed"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "main",
+      "label": "Calibration phases"
+    },
+    {
+      "id": "interruptions",
+      "label": "Interruptions and recovery"
+    },
+    {
+      "id": "terminal",
+      "label": "Terminal outcome"
+    }
+  ],
+  "states": [
+    {
+      "id": "not_installed",
+      "type": "start",
+      "label": "Not installed",
+      "sublabel": "listed in the catalogue",
+      "lane": "main",
+      "col": 0,
+      "step": "01",
+      "tag": "entry"
+    },
+    {
+      "id": "installing",
+      "type": "active",
+      "label": "Installing",
+      "sublabel": "live log in a dialog",
+      "lane": "main",
+      "col": 1,
+      "step": "02",
+      "tag": "job"
+    },
+    {
+      "id": "installed",
+      "type": "success",
+      "label": "Installed",
+      "sublabel": "its venv imports the package",
+      "lane": "main",
+      "col": 2,
+      "step": "03",
+      "tag": "usable"
+    },
+    {
+      "id": "update_avail",
+      "type": "waiting",
+      "label": "Update available",
+      "sublabel": "upstream moved ahead",
+      "lane": "main",
+      "col": 3,
+      "step": "04",
+      "tag": "badge"
+    },
+    {
+      "id": "removed",
+      "type": "neutral",
+      "label": "Removed",
+      "sublabel": "files stay on disk",
+      "lane": "main",
+      "col": 4,
+      "step": "05",
+      "tag": "reversible"
+    },
+    {
+      "id": "install_failed",
+      "type": "failure",
+      "label": "Install failed",
+      "sublabel": "log kept, errors in red",
+      "lane": "interruptions",
+      "col": 0,
+      "tag": "retryable"
+    },
+    {
+      "id": "run_active",
+      "type": "active",
+      "label": "Solving",
+      "sublabel": "worker holds the environment",
+      "lane": "interruptions",
+      "col": 1,
+      "tag": "lock"
+    },
+    {
+      "id": "run_failed",
+      "type": "failure",
+      "label": "Run failed",
+      "sublabel": "or cancelled by the user",
+      "lane": "terminal",
+      "col": 2,
+      "tag": "terminal"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "do-install",
+      "from": "not_installed",
+      "to": "installing",
+      "label": "Install",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelDy": -24
+    },
+    {
+      "id": "install-ok",
+      "from": "installing",
+      "to": "installed",
+      "variant": "emphasis",
+      "route": "straight",
+      "note": "Marked installed only after the calibration's own venv Python imports the country package."
+    },
+    {
+      "id": "install-err",
+      "from": "installing",
+      "to": "install_failed",
+      "variant": "security",
+      "note": "The dialog becomes an error view: one line summary, the full log with error lines in red, copy log, and Retry."
+    },
+    {
+      "id": "install-retry",
+      "from": "install_failed",
+      "to": "installing",
+      "label": "Retry",
+      "variant": "emphasis",
+      "labelAt": [
+        323,
+        352
+      ]
+    },
+    {
+      "id": "found-update",
+      "from": "installed",
+      "to": "update_avail",
+      "variant": "default",
+      "route": "straight",
+      "note": "Every installed calibration is compared against its upstream repository in the background when the page opens."
+    },
+    {
+      "id": "do-update",
+      "from": "update_avail",
+      "to": "installing",
+      "label": "Update",
+      "variant": "emphasis",
+      "route": "top-channel",
+      "channelY": 72
+    },
+    {
+      "id": "do-remove",
+      "from": "update_avail",
+      "to": "removed",
+      "variant": "default",
+      "route": "straight",
+      "note": "Remove de-registers the calibration inside MUIOGO. The files stay on disk and it can be added back."
+    },
+    {
+      "id": "start-run",
+      "from": "installed",
+      "to": "run_active",
+      "variant": "default",
+      "note": "Selecting a case on the Run page and starting it."
+    },
+    {
+      "id": "run-err",
+      "from": "run_active",
+      "to": "run_failed",
+      "variant": "security",
+      "note": "A non-zero worker exit, or a cancel, which stops the whole worker process tree."
+    },
+    {
+      "id": "blocks-update",
+      "from": "run_active",
+      "to": "update_avail",
+      "label": "update blocked",
+      "variant": "security",
+      "labelAt": [
+        636,
+        233
+      ],
+      "route": "straight"
+    }
+  ]
+}

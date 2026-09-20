@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MUIOGO: two-model shell and the OG-Core stack",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/EAPD-DRB/MUIOGO",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "a875cdc30e81683d9e8e34dc07a7b9bbec8ead76"
+    },
+    "views": [
+      {
+        "id": "model-switch",
+        "label": "Picking a model",
+        "focus": [
+          "shell",
+          "clews_ui",
+          "og_ui"
+        ],
+        "note": "One header selector decides which model's navigation and working area is visible."
+      },
+      {
+        "id": "og-request",
+        "label": "An OG-Core request",
+        "focus": [
+          "og_ui",
+          "ogc_client",
+          "flask",
+          "og_services"
+        ],
+        "note": "Every OG page reaches Flask through one wrapper, under the /ogc prefix."
+      },
+      {
+        "id": "solve",
+        "label": "Where a solve actually runs",
+        "focus": [
+          "og_services",
+          "worker",
+          "muiogo_dir"
+        ],
+        "note": "The solve leaves Flask and runs in the selected country calibration's own interpreter."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "shell",
+      "type": "frontend",
+      "label": "MUIOGO Shell",
+      "sublabel": "header model selector",
+      "tag": "PR #492",
+      "pos": [
+        40,
+        60
+      ],
+      "size": [
+        165,
+        62
+      ],
+      "sources": [
+        {
+          "path": "WebAPP/Classes/MuiogoShell.Class.js",
+          "label": "shell state"
+        }
+      ]
+    },
+    {
+      "id": "og_ui",
+      "type": "frontend",
+      "label": "OG-Core UI islands",
+      "sublabel": "Cases, Run, Results",
+      "tag": "PR #492 to #525",
+      "pos": [
+        300,
+        60
+      ],
+      "size": [
+        175,
+        62
+      ]
+    },
+    {
+      "id": "ogc_client",
+      "type": "frontend",
+      "label": "Ogc + OGWorkspace",
+      "sublabel": "wrapper and session",
+      "pos": [
+        580,
+        60
+      ],
+      "size": [
+        175,
+        62
+      ],
+      "sources": [
+        {
+          "path": "WebAPP/Classes/Ogc.Class.js",
+          "label": "/ogc wrapper"
+        }
+      ]
+    },
+    {
+      "id": "country_repos",
+      "type": "external",
+      "label": "Country calibrations",
+      "sublabel": "OG-USA, OG-ETH, OG-ZAF",
+      "pos": [
+        860,
+        60
+      ],
+      "size": [
+        175,
+        62
+      ]
+    },
+    {
+      "id": "clews_ui",
+      "type": "frontend",
+      "label": "CLEWS pages",
+      "sublabel": "existing MUIO interface",
+      "tag": "unchanged",
+      "pos": [
+        40,
+        250
+      ],
+      "size": [
+        165,
+        62
+      ]
+    },
+    {
+      "id": "flask",
+      "type": "backend",
+      "label": "Flask app",
+      "sublabel": "API and static WebAPP",
+      "pos": [
+        580,
+        250
+      ],
+      "size": [
+        175,
+        62
+      ],
+      "sources": [
+        {
+          "path": "API/app.py",
+          "label": "entry point"
+        }
+      ]
+    },
+    {
+      "id": "og_services",
+      "type": "backend",
+      "label": "OG-Core services",
+      "sublabel": "cases, queue, runner",
+      "pos": [
+        860,
+        250
+      ],
+      "size": [
+        175,
+        62
+      ],
+      "sources": [
+        {
+          "path": "API/Classes/OGCore/RunJob.py",
+          "label": "queue and admission"
+        }
+      ]
+    },
+    {
+      "id": "clews_store",
+      "type": "database",
+      "label": "CLEWS DataStorage",
+      "sublabel": "CLEWS cases and solves",
+      "pos": [
+        300,
+        440
+      ],
+      "size": [
+        175,
+        62
+      ]
+    },
+    {
+      "id": "muiogo_dir",
+      "type": "database",
+      "label": "~/.muiogo",
+      "sublabel": "og-state, og-models",
+      "pos": [
+        580,
+        440
+      ],
+      "size": [
+        175,
+        62
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "ogc_worker.py",
+      "sublabel": "calibration venv python",
+      "pos": [
+        860,
+        440
+      ],
+      "size": [
+        175,
+        62
+      ],
+      "sources": [
+        {
+          "path": "API/Classes/OGCore/ogc_worker.py",
+          "label": "the solve"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "shell",
+      "to": "og_ui",
+      "label": "select",
+      "variant": "emphasis"
+    },
+    {
+      "from": "shell",
+      "to": "clews_ui",
+      "label": "select",
+      "labelDy": 24
+    },
+    {
+      "from": "og_ui",
+      "to": "ogc_client",
+      "label": "session",
+      "variant": "emphasis"
+    },
+    {
+      "from": "ogc_client",
+      "to": "flask",
+      "label": "/ogc XHR",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "from": "clews_ui",
+      "to": "flask",
+      "label": "existing routes",
+      "variant": "dashed"
+    },
+    {
+      "from": "flask",
+      "to": "og_services",
+      "label": "delegate",
+      "variant": "emphasis"
+    },
+    {
+      "from": "flask",
+      "to": "clews_store",
+      "label": "GLPK or CBC",
+      "variant": "dashed"
+    },
+    {
+      "from": "og_services",
+      "to": "worker",
+      "label": "spawn",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "from": "og_services",
+      "to": "muiogo_dir",
+      "label": "cases and runs"
+    },
+    {
+      "from": "og_services",
+      "to": "country_repos",
+      "label": "clone and update check",
+      "variant": "dashed"
+    },
+    {
+      "from": "worker",
+      "to": "muiogo_dir",
+      "label": "writes",
+      "labelDx": 0,
+      "labelDy": 48
+    }
+  ],
+  "cards": [
+    {
+      "dot": "orange",
+      "title": "Why a shell, not a menu item",
+      "items": [
+        "OG-Core is a peer of CLEWS, so the switch sits in the header",
+        "Switching replaces the sidebar and the working area together",
+        "CLEWS keeps its own theme and workflow, untouched"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Keeping the fork mergeable",
+      "items": [
+        "OG markup lives under a .ogc-page root with .ogc-* styles only",
+        "All new styling is isolated in muiogo.css",
+        "Four upstream files carry small marked insertion points"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Who owns which file",
+      "items": [
+        "OG-Core services own run_meta.json and run_log.txt",
+        "The worker owns run_status.json and the result files",
+        "A run counts as done only when the worker exits clean"
+      ]
+    }
+  ]
+}

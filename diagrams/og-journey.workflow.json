@@ -1,0 +1,336 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Running a country: Home to Cases to Parameters to Run to Results",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "happy-path",
+        "label": "One reform, start to finish",
+        "focus": [
+          "home",
+          "cases",
+          "params",
+          "run",
+          "queue",
+          "worker",
+          "results"
+        ],
+        "note": "The path an analyst walks once a country calibration is installed."
+      },
+      {
+        "id": "guards",
+        "label": "Where the UI says no",
+        "focus": [
+          "run",
+          "needs_baseline",
+          "cache",
+          "failed"
+        ],
+        "note": "Each guard is a disabled control with a reason, not an error after the fact."
+      },
+      {
+        "id": "evidence",
+        "label": "What a run leaves behind",
+        "focus": [
+          "worker",
+          "artifacts",
+          "results"
+        ],
+        "note": "Results are read from artifacts on disk, never held in the browser."
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "workspace page"
+        },
+        "backend": {
+          "label": "Flask or worker"
+        },
+        "database": {
+          "label": "artifacts on disk"
+        },
+        "security": {
+          "label": "guard or failure"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "ui",
+      "label": "Workspace pages"
+    },
+    {
+      "id": "api",
+      "label": "Flask and worker"
+    },
+    {
+      "id": "guards",
+      "label": "Guards and failure",
+      "variant": "exception"
+    }
+  ],
+  "phases": [
+    {
+      "id": "setup",
+      "label": "Choose",
+      "fromCol": 0,
+      "toCol": 1
+    },
+    {
+      "id": "author",
+      "label": "Author the case",
+      "fromCol": 2,
+      "toCol": 3,
+      "variant": "emphasis"
+    },
+    {
+      "id": "solve",
+      "label": "Solve and read",
+      "fromCol": 4,
+      "toCol": 5
+    }
+  ],
+  "mainPath": [
+    "home",
+    "cases",
+    "params",
+    "run",
+    "queue",
+    "worker",
+    "results"
+  ],
+  "nodes": [
+    {
+      "id": "home",
+      "lane": "ui",
+      "col": 0,
+      "type": "frontend",
+      "label": "Home",
+      "sublabel": "country cards",
+      "tag": "PR #492",
+      "width": 136
+    },
+    {
+      "id": "cases",
+      "lane": "ui",
+      "col": 1,
+      "type": "frontend",
+      "label": "Cases",
+      "sublabel": "baseline and reforms",
+      "tag": "PR #522",
+      "width": 136
+    },
+    {
+      "id": "params",
+      "lane": "ui",
+      "col": 2,
+      "type": "frontend",
+      "label": "Parameters",
+      "sublabel": "Tabulator tables",
+      "width": 136
+    },
+    {
+      "id": "run",
+      "lane": "ui",
+      "col": 3,
+      "type": "frontend",
+      "label": "Run",
+      "sublabel": "pick and queue",
+      "width": 136
+    },
+    {
+      "id": "results",
+      "lane": "ui",
+      "col": 5,
+      "type": "frontend",
+      "label": "Results",
+      "sublabel": "ECharts and tables",
+      "tag": "PR #525",
+      "width": 136
+    },
+    {
+      "id": "session",
+      "lane": "api",
+      "col": 1,
+      "type": "backend",
+      "label": "Workspace session",
+      "sublabel": "country scoped",
+      "width": 136
+    },
+    {
+      "id": "queue",
+      "lane": "api",
+      "col": 3,
+      "type": "backend",
+      "label": "RunJob queue",
+      "sublabel": "one solve at a time",
+      "width": 136
+    },
+    {
+      "id": "worker",
+      "lane": "api",
+      "col": 4,
+      "type": "backend",
+      "label": "ogc_worker",
+      "sublabel": "steady state, then path",
+      "width": 136
+    },
+    {
+      "id": "artifacts",
+      "lane": "api",
+      "col": 5,
+      "type": "database",
+      "label": "Run artifacts",
+      "sublabel": "status, log, results",
+      "width": 136
+    },
+    {
+      "id": "needs_baseline",
+      "lane": "guards",
+      "col": 3,
+      "type": "security",
+      "label": "Needs its baseline",
+      "sublabel": "control stays disabled",
+      "width": 136
+    },
+    {
+      "id": "cache",
+      "lane": "guards",
+      "col": 4,
+      "type": "security",
+      "label": "Fingerprint match",
+      "sublabel": "will use cached",
+      "width": 136
+    },
+    {
+      "id": "failed",
+      "lane": "guards",
+      "col": 5,
+      "type": "security",
+      "label": "Did not converge",
+      "sublabel": "OG-Core's own message",
+      "width": 136
+    }
+  ],
+  "edges": [
+    {
+      "id": "open-country",
+      "from": "home",
+      "to": "cases",
+      "label": "open country",
+      "variant": "emphasis"
+    },
+    {
+      "id": "activate",
+      "from": "home",
+      "to": "session",
+      "label": "activate",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "open-case",
+      "from": "cases",
+      "to": "params",
+      "label": "open a case",
+      "variant": "emphasis"
+    },
+    {
+      "id": "save",
+      "from": "params",
+      "to": "run",
+      "label": "save overrides",
+      "variant": "emphasis"
+    },
+    {
+      "id": "start",
+      "from": "run",
+      "to": "queue",
+      "label": "start selected",
+      "variant": "emphasis"
+    },
+    {
+      "id": "spawn",
+      "from": "queue",
+      "to": "worker",
+      "label": "spawn",
+      "variant": "emphasis"
+    },
+    {
+      "id": "read-results",
+      "from": "worker",
+      "to": "results",
+      "label": "read when complete",
+      "variant": "emphasis",
+      "role": "return"
+    },
+    {
+      "id": "write-artifacts",
+      "from": "worker",
+      "to": "artifacts",
+      "label": "writes",
+      "variant": "dashed",
+      "role": "async"
+    },
+    {
+      "id": "guard-baseline",
+      "from": "run",
+      "to": "needs_baseline",
+      "label": "reform has no baseline",
+      "variant": "security",
+      "role": "error",
+      "channelX": 645,
+      "labelDy": 62
+    },
+    {
+      "id": "guard-cache",
+      "from": "queue",
+      "to": "cache",
+      "label": "inputs unchanged",
+      "variant": "security",
+      "role": "branch"
+    },
+    {
+      "id": "guard-failed",
+      "from": "worker",
+      "to": "failed",
+      "label": "worker exits non-zero",
+      "variant": "security",
+      "role": "error"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "orange",
+      "title": "Terminology the mentors fixed",
+      "items": [
+        "Scenario became case, because that is what economists say",
+        "A baseline is a reference run, a reform is measured against it",
+        "Parameters are reached by opening a case, not from the sidebar"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Honest progress, not a fake bar",
+      "items": [
+        "Stage and iteration count, never a percent or an ETA",
+        "Failure is reported as a finding with OG-Core's own message",
+        "Cancel stops the whole worker process tree"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Why results can be trusted",
+      "items": [
+        "Every completed run stores an input fingerprint",
+        "Changing a parameter invalidates that run's results",
+        "Rerunning a baseline invalidates the reforms on top of it"
+      ]
+    }
+  ]
+}

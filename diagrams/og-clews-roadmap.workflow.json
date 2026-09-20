@@ -1,0 +1,323 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Four phases to OG-CLEWS, and where this summer landed",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "delivered",
+        "label": "Delivered this summer",
+        "focus": [
+          "ci",
+          "shell",
+          "workspace"
+        ],
+        "note": "A stable platform and a complete standalone OG-Core workflow."
+      },
+      {
+        "id": "in-flight",
+        "label": "In flight",
+        "focus": [
+          "linker",
+          "schema2",
+          "coupled_ui"
+        ],
+        "note": "The one-way coupled passes and the bridge variable schema they both need."
+      },
+      {
+        "id": "convergence",
+        "label": "The convergence phase",
+        "focus": [
+          "coupled_ui",
+          "orchestrator",
+          "converge_ui"
+        ],
+        "note": "Iterating the two models until the fiscal and physical answers stop moving."
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "frontend and platform"
+        },
+        "backend": {
+          "label": "modelling and integration"
+        },
+        "messagebus": {
+          "label": "shared contract"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "ui",
+      "label": "Frontend and platform"
+    },
+    {
+      "id": "api",
+      "label": "Modelling and integration"
+    },
+    {
+      "id": "shared",
+      "label": "Shared contracts"
+    }
+  ],
+  "phases": [
+    {
+      "id": "p12",
+      "label": "Platform, then OG-Core alone",
+      "fromCol": 0,
+      "toCol": 2,
+      "variant": "emphasis"
+    },
+    {
+      "id": "p3",
+      "label": "Coupled, one way",
+      "fromCol": 3,
+      "toCol": 4
+    },
+    {
+      "id": "p4",
+      "label": "Converging",
+      "fromCol": 5,
+      "toCol": 5,
+      "variant": "dashed"
+    }
+  ],
+  "mainPath": [
+    "ci",
+    "shell",
+    "workspace",
+    "coupled_ui",
+    "converge_ui"
+  ],
+  "nodes": [
+    {
+      "id": "ci",
+      "lane": "ui",
+      "col": 0,
+      "type": "frontend",
+      "label": "CI on three OS",
+      "sublabel": "Playwright shell smoke",
+      "tag": "merged",
+      "width": 136
+    },
+    {
+      "id": "shell",
+      "lane": "ui",
+      "col": 1,
+      "type": "frontend",
+      "label": "Shell and setup",
+      "sublabel": "#492, #495",
+      "tag": "merged",
+      "width": 136
+    },
+    {
+      "id": "workspace",
+      "lane": "ui",
+      "col": 2,
+      "type": "frontend",
+      "label": "Country workspace",
+      "sublabel": "#522, #525",
+      "tag": "in review",
+      "width": 136
+    },
+    {
+      "id": "coupled_ui",
+      "lane": "ui",
+      "col": 4,
+      "type": "frontend",
+      "label": "Coupled run UI",
+      "sublabel": "guided two stage run",
+      "tag": "next",
+      "width": 136
+    },
+    {
+      "id": "converge_ui",
+      "lane": "ui",
+      "col": 5,
+      "type": "frontend",
+      "label": "Convergence UI",
+      "sublabel": "distance to tolerance",
+      "tag": "future",
+      "width": 136
+    },
+    {
+      "id": "installer",
+      "lane": "api",
+      "col": 0,
+      "type": "backend",
+      "label": "Install and registry",
+      "sublabel": "#487, #503",
+      "tag": "merged",
+      "width": 136
+    },
+    {
+      "id": "runner",
+      "lane": "api",
+      "col": 1,
+      "type": "backend",
+      "label": "Ingestion and runner",
+      "sublabel": "#498",
+      "tag": "merged",
+      "width": 136
+    },
+    {
+      "id": "linker",
+      "lane": "api",
+      "col": 3,
+      "type": "backend",
+      "label": "Linker passes",
+      "sublabel": "#537 forward, #539 reverse",
+      "tag": "open",
+      "width": 136
+    },
+    {
+      "id": "orchestrator",
+      "lane": "api",
+      "col": 5,
+      "type": "backend",
+      "label": "Convergence loop",
+      "sublabel": "iterate to a fixed point",
+      "tag": "future",
+      "width": 136
+    },
+    {
+      "id": "schema1",
+      "lane": "shared",
+      "col": 2,
+      "type": "messagebus",
+      "label": "Schema v1",
+      "sublabel": "OG-Core results shape",
+      "tag": "agreed",
+      "width": 136
+    },
+    {
+      "id": "schema2",
+      "lane": "shared",
+      "col": 3,
+      "type": "messagebus",
+      "label": "Schema v2",
+      "sublabel": "bridge variables",
+      "tag": "in progress",
+      "width": 136
+    }
+  ],
+  "edges": [
+    {
+      "id": "platform-first",
+      "from": "ci",
+      "to": "shell",
+      "label": "platform stable",
+      "variant": "emphasis"
+    },
+    {
+      "id": "shell-to-workspace",
+      "from": "shell",
+      "to": "workspace",
+      "label": "installed country",
+      "variant": "emphasis"
+    },
+    {
+      "id": "standalone-done",
+      "from": "workspace",
+      "to": "coupled_ui",
+      "label": "OG-Core runs alone",
+      "variant": "emphasis"
+    },
+    {
+      "id": "iterate",
+      "from": "coupled_ui",
+      "to": "converge_ui",
+      "label": "iterate, not once",
+      "variant": "emphasis"
+    },
+    {
+      "id": "installer-contract",
+      "from": "installer",
+      "to": "shell",
+      "label": "install API",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "runner-contract",
+      "from": "runner",
+      "to": "workspace",
+      "label": "run API",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "results-schema",
+      "from": "workspace",
+      "to": "schema1",
+      "label": "settles",
+      "variant": "dashed",
+      "role": "async"
+    },
+    {
+      "id": "schema-progression",
+      "from": "schema1",
+      "to": "schema2",
+      "label": "extends",
+      "variant": "dashed"
+    },
+    {
+      "id": "bridge-needed",
+      "from": "schema2",
+      "to": "linker",
+      "label": "both sides need it",
+      "variant": "security",
+      "role": "branch"
+    },
+    {
+      "id": "linker-to-ui",
+      "from": "linker",
+      "to": "coupled_ui",
+      "label": "exchange artifacts",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "loop-control",
+      "from": "orchestrator",
+      "to": "converge_ui",
+      "label": "stopping criteria",
+      "variant": "dashed",
+      "role": "branch"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "What this summer actually shipped",
+      "items": [
+        "A header level model switch that keeps CLEWS untouched",
+        "Install, update and remove a country calibration from the UI",
+        "Cases, parameters, queued runs, and a results workspace"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Why convergence is a later phase",
+      "items": [
+        "It needs the one way coupled passes to exist first",
+        "It needs Schema v2, the bridge variables both models agree on",
+        "The UI work is a loop view: distance to tolerance per iteration"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "The two lanes only meet at contracts",
+      "items": [
+        "Schema v1 unblocked the results page and the runner together",
+        "Schema v2 blocks the coupled UI and the linker together",
+        "Everything else was built in parallel against a mock"
+      ]
+    }
+  ]
+}
