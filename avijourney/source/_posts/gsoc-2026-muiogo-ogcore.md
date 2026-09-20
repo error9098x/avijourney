@@ -6,6 +6,10 @@ tags: [gsoc, gsoc-2026, united-nations, un-desa, muiogo, og-core, osemosys, clew
 description: "My GSoC 2026 final report for the United Nations. What I shipped in MUIOGO, what I got wrong, and why the convergence phase is still ahead."
 ---
 
+<p align="center">
+  <img src="/images/gsoc/gsoc-logo.svg" alt="Google Summer of Code" width="70%">
+</p>
+
 This is my final report for Google Summer of Code 2026. I worked with the United Nations Office of Information and Communications Technology on a project owned by the Economic Analysis and Policy Division at UN DESA, and my job was the frontend and software engineering side of a tool called MUIOGO.
 
 Short version of what MUIOGO is. UN DESA maintains two open source policy models. CLEWS looks at climate, land, energy and water, so it tells a country whether a plan is physically possible, like whether there's actually enough land and water for a biofuel policy. OG-Core is an overlapping generations macroeconomic model, so it tells you what a tax or pension change does to growth and jobs across generations. Both are mature. Both have been used in more than 20 countries. And until this year they didn't talk to each other, and only one of them had a browser interface.
