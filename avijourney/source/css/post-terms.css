@@ -23,3 +23,20 @@
   margin: 1.4em 0;
 }
 .e-content .term-key span { font-weight: 600; }
+
+/* A category term that is also a link keeps its category colour, and keeps the
+   underline so it still reads as clickable. Without this the theme's own link
+   colour wins and the colour coding breaks wherever a term is linked. */
+.e-content a.t-model,  .e-content a .t-model  { color: #81a2be; }
+.e-content a.t-app,    .e-content a .t-app    { color: #de935f; }
+.e-content a.t-base,   .e-content a .t-base   { color: #b294bb; }
+.e-content a.t-reform, .e-content a .t-reform { color: #f0c674; }
+
+.e-content a.t-model:hover, .e-content a.t-app:hover,
+.e-content a.t-base:hover,  .e-content a.t-reform:hover { opacity: .78; }
+
+/* Whole PR headings are links now. Keep the heading's own colour and weight so
+   they still look like headings, and only underline on hover. */
+.e-content h3 a,
+.e-content h3 a:visited { color: inherit; border-bottom: 0; text-decoration: none; }
+.e-content h3 a:hover { text-decoration: underline; }

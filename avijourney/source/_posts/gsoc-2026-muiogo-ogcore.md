@@ -10,9 +10,9 @@ description: "My GSoC 2026 final report. Building the OG-Core interface in MUIOG
   <img src="/images/gsoc/gsoc-logo.svg" alt="Google Summer of Code" width="70%">
 </p>
 
-Google Summer of Code 2026 is done. I spent the summer with the [United Nations Office of Information and Communications Technology](https://unite.un.org/), on a project owned by the Economic Analysis and Policy Division at [UN DESA](https://www.un.org/en/desa), and my work was the <span class="t-model">OG-Core</span> side of a tool called [MUIOGO](https://github.com/EAPD-DRB/MUIOGO).
+Google Summer of Code 2026 is done. I spent the summer with the [United Nations Office of Information and Communications Technology](https://unite.un.org/), on a project owned by the Economic Analysis and Policy Division at [UN DESA](https://www.un.org/en/desa), and my work was the <span class="t-model">OG-Core</span> side of a tool called <a class="t-app" href="https://github.com/EAPD-DRB/MUIOGO">MUIOGO</a>.
 
-<span class="t-app">MUIOGO</span> is a browser interface for two open source policy models. [CLEWS](https://github.com/OSeMOSYS/OSeMOSYS) covers climate, land, energy and water, so it tells a country whether a plan is physically possible, like whether there's enough land and water for a biofuel policy. [OG-Core](https://github.com/PSLmodels/OG-Core) is an overlapping generations general equilibrium model, so it tells you what a tax or pension change does to growth and jobs across generations. Both have been used in more than 20 countries.
+<span class="t-app">MUIOGO</span> is a browser interface for two open source policy models. <a class="t-model" href="https://github.com/OSeMOSYS/OSeMOSYS">CLEWS</a> covers climate, land, energy and water, so it tells a country whether a plan is physically possible, like whether there's enough land and water for a biofuel policy. <a class="t-model" href="https://github.com/PSLmodels/OG-Core">OG-Core</a> is an overlapping generations general equilibrium model, so it tells you what a tax or pension change does to growth and jobs across generations. Both have been used in more than 20 countries.
 
 <!-- more -->
 
@@ -20,7 +20,7 @@ Three things feed into <span class="t-app">MUIOGO</span>, which is worth getting
 
 <img src="/images/gsoc/muiogo-upstream.svg" alt="OG-Core is calibrated per country into OG-ETH, OG-ZAF and OG-USA, which MUIOGO installs at runtime. MUIOGO is forked from OSeMOSYS and MUIO" width="100%">
 
-<span class="t-model">OG-Core</span> itself is generic. A country becomes usable by calibrating it, which produces a separate Python package like `OG-ETH` for Ethiopia or `OG-ZAF` for South Africa, each pinned to its own <span class="t-model">OG-Core</span> version. <span class="t-app">MUIOGO</span> is downstream of [MUIO](https://github.com/OSeMOSYS/MUIO), the existing <span class="t-model">OSeMOSYS</span> interface, so anything I write has to keep future upstream syncs mergeable. <span class="t-model">CLEWS</span> already had a UI through that lineage. <span class="t-model">OG-Core</span> had none, and that was my project.
+<span class="t-model">OG-Core</span> itself is generic. A country becomes usable by calibrating it, which produces a separate Python package like [`OG-ETH`](https://github.com/EAPD-DRB/OG-ETH) for Ethiopia or [`OG-ZAF`](https://github.com/EAPD-DRB/OG-ZAF) for South Africa, each pinned to its own <span class="t-model">OG-Core</span> version. <span class="t-app">MUIOGO</span> is downstream of <a class="t-app" href="https://github.com/OSeMOSYS/MUIO">MUIO</a>, the existing <span class="t-model">OSeMOSYS</span> interface, so anything I write has to keep future upstream syncs mergeable. <span class="t-model">CLEWS</span> already had a UI through that lineage. <span class="t-model">OG-Core</span> had none, and that was my project.
 
 <p class="term-key">Colour key for the rest of this post. <span class="t-model">the models</span>, <span class="t-app">the software around them</span>, <span class="t-base">a baseline run</span>, <span class="t-reform">a reform measured against one</span>.</p>
 
@@ -47,7 +47,7 @@ Taking one policy question end to end shows what those four add up to. Say you w
 
 So the <span class="t-reform">reform</span> collects meaningfully more revenue and shrinks the capital stock doing it, and the consumption Gini barely moves. That trade-off, in those units, is the output the whole interface exists to produce.
 
-### Adding an OG-Core mode to the MUIOGO interface ([#492](https://github.com/EAPD-DRB/MUIOGO/pull/492))
+### [Adding an OG-Core mode to the MUIOGO interface (#492)](https://github.com/EAPD-DRB/MUIOGO/pull/492)
 
 <span class="t-app">MUIOGO</span> could only show <span class="t-model">CLEWS</span>, so before an <span class="t-model">OG-Core</span> page could exist the app needed to hold two models at once.
 
@@ -57,7 +57,7 @@ So the <span class="t-reform">reform</span> collects meaningfully more revenue a
 - New styling is isolated in a new `muiogo.css`, and OG markup sits under a `.ogc-page` root, so <span class="t-app">MUIOGO</span> still merges cleanly with <span class="t-app">MUIO</span>.
 - Country flags are vendored SVGs rather than CDN requests, since this tool gets used where the internet isn't a given.
 
-### Installing an OG-Core country calibration from the interface ([#495](https://github.com/EAPD-DRB/MUIOGO/pull/495))
+### [Installing an OG-Core country calibration from the interface (#495)](https://github.com/EAPD-DRB/MUIOGO/pull/495)
 
 Each calibration is a separate package with its own environment, so setting one up previously meant cloning a repository and building a virtualenv by hand.
 
@@ -65,14 +65,14 @@ Each calibration is a separate package with its own environment, so setting one 
 - Add a calibration that isn't in the catalogue, from either a local folder or a Git URL.
 - A background update check, so an "update available" badge appears where upstream has moved ahead.
 - Remove a calibration, which de-registers it inside <span class="t-app">MUIOGO</span> and leaves the files on disk.
-- Verified against the real backend rather than mocks. Ethiopia and South Africa from the catalogue, OG-USA from a Git URL, each producing an environment whose own Python imports the package.
+- Verified against the real backend rather than mocks. Ethiopia and South Africa from the catalogue, [OG-USA](https://github.com/PSLmodels/OG-USA) from a Git URL, each producing an environment whose own Python imports the package.
 
-### Creating baselines and reforms, and running the model ([#522](https://github.com/EAPD-DRB/MUIOGO/pull/522))
+### [Creating baselines and reforms, and running the model (#522)](https://github.com/EAPD-DRB/MUIOGO/pull/522)
 
 This is the modelling workflow and the core of the project.
 
 - Create, edit, duplicate and delete <span class="t-base">baselines</span> and <span class="t-reform">reforms</span>.
-- A parameter editor built on Tabulator. Each parameter shows its <span class="t-model">OG-Core</span> name, its allowed range and the year it applies from, layered over the calibration's own defaults.
+- A parameter editor built on [Tabulator](https://tabulator.info/). Each parameter shows its <span class="t-model">OG-Core</span> name, its allowed range and the year it applies from, layered over the calibration's own defaults.
 - A run queue with live worker logs, cancellation and run history.
 - Progress reports the stage and the iteration count rather than a percentage, because <span class="t-model">OG-Core</span> doesn't expose one.
 - A <span class="t-reform">reform</span> whose <span class="t-base">baseline</span> has no results can't be run, and the row says why instead of failing part way through.
@@ -90,7 +90,7 @@ GE loop errors = ['-1.395e-03', '-1.126e-03', '-1.640e-02', '0.000e+00',
 
 Those `GE loop errors` are the general equilibrium residuals shrinking towards the solver's tolerance, which is the honest version of a progress bar.
 
-### Comparing a baseline against a reform ([#525](https://github.com/EAPD-DRB/MUIOGO/pull/525))
+### [Comparing a baseline against a reform (#525)](https://github.com/EAPD-DRB/MUIOGO/pull/525)
 
 A finished run leaves a folder of result files on disk, one directory per run.
 
@@ -105,7 +105,7 @@ cases/<country_id>/<casename>/
 ```
 
 - Select a <span class="t-base">baseline</span> run and a <span class="t-reform">reform</span> run, and the page computes the percentage change between them for GDP, consumption, labour, investment and the tax aggregates, plus inequality measures.
-- Charts on Apache ECharts, written as a model-neutral renderer instead of an OG-only one.
+- Charts on [Apache ECharts](https://echarts.apache.org/), written as a model-neutral renderer instead of an OG-only one.
 - Analysis tables with SVG and CSV export.
 - ECharts replaced two commercial charting libraries the old viewer depended on, which I'd raised as an issue early in the summer.
 
