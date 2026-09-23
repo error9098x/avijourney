@@ -68,4 +68,10 @@ Then converging, which is the same thing in a loop until the numbers settle. The
 
 ## Thanks
 
+<p align="center">
+  <img src="/images/gsoc/meeting.jpg" alt="A MUIOGO team video call with four participants" width="88%">
+</p>
+
+*One of our weekly calls.*
+
 Thanks to Alfonso and Marcelo for reviewing carefully, and to Aditya for the backend I spent four months calling. My favourite part was that this wasn't a demo. The models get used by economists in developing countries to test real fiscal and climate policy, and the work carries on past GSoC through UN DESA's country programmes.
