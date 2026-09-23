@@ -1,0 +1,25 @@
+/*
+ * Category colour coding for prose terms, using the same Tomorrow Night hues
+ * as the code blocks so the page reads as one palette.
+ *   t-model   the models themselves      OG-Core, CLEWS, OSeMOSYS
+ *   t-app     the software around them    MUIOGO, MUIO
+ *   t-base    a baseline run
+ *   t-reform  a reform measured against one
+ *   t-up/down direction of a result
+ */
+.e-content .t-model  { color: #81a2be; }
+.e-content .t-app    { color: #de935f; }
+.e-content .t-base   { color: #b294bb; }
+.e-content .t-reform { color: #f0c674; }
+.e-content .t-up     { color: #b5bd68; }
+.e-content .t-down   { color: #cc6666; }
+
+/* the colour key line under the intro */
+.e-content .term-key {
+  font-size: .82em;
+  color: #8a8f8c;
+  border-left: 2px solid #33373a;
+  padding-left: .85em;
+  margin: 1.4em 0;
+}
+.e-content .term-key span { font-weight: 600; }
