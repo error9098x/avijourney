@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Where MUIOGO sits",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "this project"
+        },
+        "external": {
+          "label": "dependency"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "ogcore",
+      "type": "external",
+      "label": "OG-Core",
+      "sublabel": "the macro model",
+      "pos": [
+        40,
+        60
+      ],
+      "size": [
+        185,
+        62
+      ]
+    },
+    {
+      "id": "calib",
+      "type": "external",
+      "label": "Country calibrations",
+      "sublabel": "OG-ETH, OG-ZAF, OG-USA",
+      "pos": [
+        350,
+        60
+      ],
+      "size": [
+        195,
+        62
+      ]
+    },
+    {
+      "id": "muiogo",
+      "type": "frontend",
+      "label": "MUIOGO",
+      "sublabel": "what I worked on",
+      "tag": "downstream",
+      "pos": [
+        680,
+        210
+      ],
+      "size": [
+        185,
+        62
+      ]
+    },
+    {
+      "id": "muio",
+      "type": "external",
+      "label": "OSeMOSYS and MUIO",
+      "sublabel": "the CLEWS side",
+      "pos": [
+        350,
+        360
+      ],
+      "size": [
+        195,
+        62
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "ogcore",
+      "to": "calib",
+      "label": "calibrated per country"
+    },
+    {
+      "from": "calib",
+      "to": "muiogo",
+      "label": "installed at runtime",
+      "variant": "emphasis"
+    },
+    {
+      "from": "muio",
+      "to": "muiogo",
+      "label": "forked from",
+      "variant": "dashed"
+    }
+  ]
+}
