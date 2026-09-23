@@ -1,0 +1,37 @@
+/*
+ * highlight.js v11 token names mapped onto the cactus theme's Tomorrow Night
+ * palette. The theme ships CSS for the older v9 vocabulary (.attribute, .tag,
+ * .built_in), so v11 tokens such as attr, property and punctuation render
+ * unstyled without this. Scoped to .highlight .code, so nothing else moves.
+ */
+
+/* Tomorrow Yellow: object keys, attributes, class names */
+.highlight .code .attr,
+.highlight .code .property,
+.highlight .code .title.class_,
+.highlight .code .class_ { color: #f0c674; }
+
+/* Tomorrow Green: strings and escapes */
+.highlight .code .char,
+.highlight .code .char.escape_ { color: #b5bd68; }
+
+/* Tomorrow Blue: function names */
+.highlight .code .title.function_,
+.highlight .code .function_ { color: #81a2be; }
+
+/* Tomorrow Orange: language built-ins and constants */
+.highlight .code .variable.language_,
+.highlight .code .variable.constant_ { color: #de935f; }
+
+/* Tomorrow Purple: operators and selector pseudo-classes */
+.highlight .code .operator,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo { color: #b294bb; }
+
+/* Punctuation stays quieter than the surrounding code */
+.highlight .code .punctuation,
+.highlight .code .subst { color: #9ba09e; }
+
+.highlight .code .formula { color: #81a2be; }
+.highlight .code .diff.addition_ { color: #b5bd68; }
+.highlight .code .diff.deletion_ { color: #cc6666; }

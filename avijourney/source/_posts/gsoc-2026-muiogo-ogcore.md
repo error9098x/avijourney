@@ -33,15 +33,15 @@ OG-Core itself is generic. A country becomes usable by calibrating it, which pro
 
 Taking one policy question end to end shows what those four add up to. Say you want to know what raising Ethiopia's effective corporate tax rate does to the economy. You install the `OG-ETH` calibration, which arrives with the country's own estimated defaults. You create a baseline, which is a run of the economy as calibrated, with nothing changed. Then you create a reform on top of it and edit one parameter, `adjustment_factor_for_cit_receipts`, the factor that lifts the statutory corporate rate to the effective rate actually collected. Both runs solve, and the results page reports the reform against the baseline in steady state:
 
-```text
-GDP                  -1.05%   (1.3994 -> 1.3848)
-Consumption          -1.46%   (0.5394 -> 0.5315)
-Labor                +0.38%   (0.3577 -> 0.3590)
-Tax revenue          +5.36%   (0.1831 -> 0.1929)
-Real interest rate   -0.05 percentage points
-Business tax revenue +48.7%
-Investment           -2.09%
-```
+| Steady state | Reform against baseline |
+|---|---|
+| GDP | -1.05% |
+| Consumption | -1.46% |
+| Investment | -2.09% |
+| Labour | +0.38% |
+| Tax revenue | +5.36% |
+| Business tax revenue | +48.7% |
+| Real interest rate | -0.05 percentage points |
 
 So the reform collects meaningfully more revenue and shrinks the capital stock doing it, and the consumption Gini barely moves. That trade-off, in those units, is the output the whole interface exists to produce.
 
@@ -77,7 +77,7 @@ This is the modelling workflow and the core of the project.
 
 The live log is the model's own output, streamed through to the browser:
 
-```text
+```python
 making dir:  C:\Users\Aviral\.muiogo\og-state\cases\Baseline 1\res\New reform\SS
 making dir:  C:\Users\Aviral\.muiogo\og-state\cases\Baseline 1\res\New reform\TPI
 In runner, baseline is  False
