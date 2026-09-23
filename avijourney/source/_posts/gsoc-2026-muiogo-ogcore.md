@@ -27,13 +27,44 @@ MUIOGO is a browser interface for two open source policy models that UN DESA mai
 
 That's about 22,000 lines across 147 files, and together they cover the whole OG-Core workflow. Pick a country, install it, create a baseline, add a reform on top, edit the parameters, queue the runs, read the results.
 
-[#492](https://github.com/EAPD-DRB/MUIOGO/pull/492) added the shell. There's a two-button model selector in the header, and switching replaces the sidebar and the working area together. CLEWS mode is the existing interface, untouched, on its own green accent. OG mode uses orange and opens a card grid of country calibrations. All the new styling sits in a new `muiogo.css` and the OG markup lives under a `.ogc-page` root, so MUIOGO stays mergeable with its upstream. I also vendored the country flags as SVGs rather than pulling them from a CDN, since this tool gets used in places where the internet isn't a given.
+### Making room for a second model ([#492](https://github.com/EAPD-DRB/MUIOGO/pull/492))
 
-[#495](https://github.com/EAPD-DRB/MUIOGO/pull/495) made that page work. You can install a country from the catalogue in one click and watch the log while it runs, add one from a local folder or a Git URL, or remove it. Updates get checked in the background, so an "update available" badge turns up where upstream has moved ahead. I tested it against the real backend rather than mocks, installing Ethiopia and South Africa from the catalogue and OG-USA from a Git URL, and each one gives an environment whose own Python imports the package.
+MUIOGO only had a CLEWS interface, so before any OG-Core page could exist the app needed a way to hold two models at once. This PR is that shell.
 
-[#522](https://github.com/EAPD-DRB/MUIOGO/pull/522) is the modelling workflow. Cases, the parameter editor built on Tabulator, and the run queue with live logs and cancellation. One detail I like is the progress display. OG-Core solves a steady state and then a transition path, and it doesn't know its own percentage, so a progress bar would just be a guess. The run page shows the stage and the iteration count instead.
+- A two-button model selector in the header. Switching swaps the sidebar and the working area together.
+- CLEWS mode is the existing interface, untouched and still on its own green accent.
+- OG mode uses orange and opens a grid of country calibration cards, read live from the installer register.
+- New styling is isolated in a new `muiogo.css`, and OG markup sits under a `.ogc-page` root, so MUIOGO still merges cleanly with its upstream.
+- Country flags are vendored SVGs rather than CDN requests, since this tool gets used where the internet isn't a given.
 
-[#525](https://github.com/EAPD-DRB/MUIOGO/pull/525) is the results workspace, with charts, comparison between a baseline and a reform, tables and export. It uses Apache ECharts, which came out of an issue I raised early on about the old viewer depending on two commercial charting libraries.
+### Installing a country without touching a terminal ([#495](https://github.com/EAPD-DRB/MUIOGO/pull/495))
+
+OG-Core is calibrated per country, and each calibration is a separate Python package with its own environment. Before this, setting one up meant cloning a repo and building a venv by hand. This PR turns the calibration home into a working setup page.
+
+- Install from the catalogue in one click, with the install log streaming while it runs.
+- Add a calibration that isn't in the catalogue, from either a local folder or a Git URL.
+- A background update check, so an "update available" badge appears where upstream has moved ahead.
+- Remove a calibration, which de-registers it inside MUIOGO and leaves the files on disk.
+- Verified against the real backend rather than mocks. Ethiopia and South Africa from the catalogue, OG-USA from a Git URL, each producing an environment whose own Python imports the package.
+
+### Building a scenario and running it ([#522](https://github.com/EAPD-DRB/MUIOGO/pull/522))
+
+This is the modelling workflow and the core of the project. A baseline is a reference run, a reform is measured against it, and this PR covers everything from creating those to getting a solve out.
+
+- Create, edit, duplicate and delete baselines and reforms.
+- A parameter editor built on Tabulator, with the model's own defaults layered underneath your overrides.
+- A run queue with live worker logs, cancellation and run history.
+- Progress shows the stage, meaning steady state and then transition path, plus the iteration count. OG-Core doesn't know its own percentage, so a progress bar would only be a guess.
+- Guards instead of late errors. A reform whose baseline has no results can't be run, and the row says why rather than failing halfway through.
+
+### Reading what came out ([#525](https://github.com/EAPD-DRB/MUIOGO/pull/525))
+
+A finished run leaves a folder of result files on disk. This PR is the page that turns them into something an economist can actually compare.
+
+- Pick a baseline run and a reform run and see them against each other.
+- Charts on Apache ECharts, written as a model-neutral renderer instead of an OG-only one.
+- Analysis tables with export.
+- ECharts replaced two commercial charting libraries the old viewer depended on, which I'd raised as an issue early in the summer.
 
 Issues I raised along the way: [#490](https://github.com/EAPD-DRB/MUIOGO/issues/490), [#491](https://github.com/EAPD-DRB/MUIOGO/issues/491), [#494](https://github.com/EAPD-DRB/MUIOGO/issues/494), [#500](https://github.com/EAPD-DRB/MUIOGO/issues/500), [#501](https://github.com/EAPD-DRB/MUIOGO/issues/501), [#521](https://github.com/EAPD-DRB/MUIOGO/issues/521), [#524](https://github.com/EAPD-DRB/MUIOGO/issues/524) and [#528](https://github.com/EAPD-DRB/MUIOGO/issues/528). All the work is on [EAPD-DRB/MUIOGO](https://github.com/EAPD-DRB/MUIOGO).
 
@@ -47,7 +78,7 @@ The part worth knowing is that a solve doesn't run inside Flask. Each installed 
 
 <img src="/images/gsoc/muiogo-journey.svg" alt="Workflow from Home to Cases to Parameters to Run to Results, with a lane for guards and failure states" width="100%">
 
-The bottom lane is the bit I spent the most time on. A reform is measured against a baseline, and a reform whose baseline has no results can't be run, so that row stays disabled with the reason shown rather than failing later. Every completed run also stores a fingerprint of its inputs, so changing a parameter invalidates that run's results and rerunning a baseline invalidates the reforms on top of it. Learning that these were real constraints and not details I could skip took a while.
+Every completed run stores a fingerprint of its inputs, so changing a parameter invalidates that run's results, and rerunning a baseline invalidates every reform sitting on top of it. The bottom lane of the diagram is where that gets enforced. Working out that these were real constraints and not details I could skip took me a while.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/04a5d8d0-a918-4f6b-97e6-6887c4295b93" width="49%">
