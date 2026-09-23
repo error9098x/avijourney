@@ -49,7 +49,7 @@ So the <span class="t-reform">reform</span> collects meaningfully more revenue a
 
 ### [Adding an OG-Core mode to the MUIOGO interface (#492)](https://github.com/EAPD-DRB/MUIOGO/pull/492)
 
-<span class="t-app">MUIOGO</span> could only show <span class="t-model">CLEWS</span>, so before an <span class="t-model">OG-Core</span> page could exist the app needed to hold two models at once.
+My first cut put <span class="t-model">OG-Core</span> inside the <span class="t-model">CLEWS</span> menu. That was the wrong shape, because <span class="t-model">OG-Core</span> is a peer of <span class="t-model">CLEWS</span> and not a page inside it. So before an <span class="t-model">OG-Core</span> page could exist, the app needed to hold two models at once.
 
 - A two-button model selector in the header. Switching swaps the sidebar and the working area together.
 - <span class="t-model">CLEWS</span> mode is the existing interface, untouched and still on its own green accent.
@@ -88,7 +88,7 @@ GE loop errors = ['-1.395e-03', '-1.126e-03', '-1.640e-02', '0.000e+00',
                   '-1.531e-02', '-1.822e-05', '-2.449e-05', '-2.596e-05']
 ```
 
-Those `GE loop errors` are the general equilibrium residuals shrinking towards the solver's tolerance, which is the honest version of a progress bar.
+Those `GE loop errors` are the general equilibrium residuals shrinking towards the solver's tolerance, which is the honest version of a progress bar. I'd assumed a percentage could be worked out from the iteration count. It can't, because the number of iterations isn't known in advance.
 
 ### [Comparing a baseline against a reform (#525)](https://github.com/EAPD-DRB/MUIOGO/pull/525)
 
@@ -107,7 +107,7 @@ cases/<country_id>/<casename>/
 - Select a <span class="t-base">baseline</span> run and a <span class="t-reform">reform</span> run, and the page computes the percentage change between them for GDP, consumption, labour, investment and the tax aggregates, plus inequality measures.
 - Charts on [Apache ECharts](https://echarts.apache.org/), written as a model-neutral renderer instead of an OG-only one.
 - Analysis tables with SVG and CSV export.
-- ECharts replaced two commercial charting libraries the old viewer depended on, which I'd raised as an issue early in the summer.
+- ECharts replaced two commercial charting libraries the old viewer depended on, which I'd raised as an issue early in the summer. This matters because a tool that gets handed to a finance ministry can't ship on a licence nobody there can audit.
 
 <p align="center">
   <img src="/images/gsoc/muiogo-screens.jpg" alt="Four screens of the OG-Core interface: cases, parameters, run and results" width="100%">
@@ -137,7 +137,7 @@ Every completed run stores a fingerprint of its inputs, so changing a parameter 
 
 The full project is four deliverables. A cross-platform baseline, <span class="t-model">OG-Core</span> on its own, coupled one-way runs where one model's output feeds the other, and a converging workflow that iterates both until the answers stop moving. My summer was the second one.
 
-Coupled mode is the next piece of UI work. A coupled run means running <span class="t-model">CLEWS</span> first, turning what the energy and land and water system did into the fiscal inputs <span class="t-model">OG-Core</span> understands, then running <span class="t-model">OG-Core</span> on top. Then the other direction. The hard part isn't the running, it's the translation, because the two models have different output shapes, different units and different time resolution. So the set of bridge variables has to be agreed first. After that it needs a guided run rather than one button, with the exchanged values shown at each handoff so an analyst can check them, and a combined view of the physical and fiscal side of the same scenario.
+Coupled mode is the next piece of UI work. A coupled run means running <span class="t-model">CLEWS</span> first, turning what the energy and land and water system did into the fiscal inputs <span class="t-model">OG-Core</span> understands, then running <span class="t-model">OG-Core</span> on top. Then the other direction. I'd assumed coupling was mostly plumbing. The hard part isn't the running though, it's the translation, because the two models have different output shapes, different units and different time resolution. So the set of bridge variables has to be agreed first. After that it needs a guided run rather than one button, with the exchanged values shown at each handoff so an analyst can check them, and a combined view of the physical and fiscal side of the same scenario.
 
 Then converging, which is the same thing in a loop until the numbers settle. The design problem there is showing distance to tolerance per iteration, so a stuck or oscillating run is obvious early enough to cancel it. Packaging the app into a downloadable installer per platform is also still ahead.
 
