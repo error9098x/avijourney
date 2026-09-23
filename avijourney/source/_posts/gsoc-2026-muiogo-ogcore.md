@@ -12,7 +12,7 @@ description: "My GSoC 2026 final report. Building the OG-Core interface in MUIOG
 
 Google Summer of Code 2026 is done. I spent the summer with the [United Nations Office of Information and Communications Technology](https://unite.un.org/), on a project owned by the Economic Analysis and Policy Division at [UN DESA](https://www.un.org/en/desa), and my work was the <span class="t-model">OG-Core</span> side of a tool called <a class="t-app" href="https://github.com/EAPD-DRB/MUIOGO">MUIOGO</a>.
 
-<span class="t-app">MUIOGO</span> is a browser interface for two open source policy models. <a class="t-model" href="https://github.com/OSeMOSYS/OSeMOSYS">CLEWS</a> covers climate, land, energy and water, so it tells a country whether a plan is physically possible, like whether there's enough land and water for a biofuel policy. <a class="t-model" href="https://github.com/PSLmodels/OG-Core">OG-Core</a> is an overlapping generations general equilibrium model, so it tells you what a tax or pension change does to growth and jobs across generations. Both have been used in more than 20 countries.
+<span class="t-app">MUIOGO</span> is a browser interface for two open source policy models. <a class="t-model" href="https://github.com/OSeMOSYS/OSeMOSYS">CLEWS</a> covers climate, land, energy and water, so it tells a country whether a plan is physically possible, like whether there's enough land and water for a biofuel policy. <a class="t-model" href="https://github.com/PSLmodels/OG-Core">OG-Core</a> is an overlapping generations general equilibrium model, so it shows what a tax or pension change does to growth and jobs across generations. Both have been used in more than 20 countries.
 
 <!-- more -->
 
@@ -33,7 +33,7 @@ Three things feed into <span class="t-app">MUIOGO</span>, which is worth getting
 | [#522](https://github.com/EAPD-DRB/MUIOGO/pull/522) | Cases, parameters and run management |
 | [#525](https://github.com/EAPD-DRB/MUIOGO/pull/525) | The results workspace |
 
-Taking one policy question end to end shows what those four add up to. Say you want to know what raising Ethiopia's effective corporate tax rate does to the economy. You install the `OG-ETH` calibration, which arrives with the country's own estimated defaults. You create a <span class="t-base">baseline</span>, which is a run of the economy as calibrated, with nothing changed. Then you create a <span class="t-reform">reform</span> on top of it and edit one parameter, `adjustment_factor_for_cit_receipts`, the factor that lifts the statutory corporate rate to the effective rate actually collected. Both runs solve, and the results page reports the <span class="t-reform">reform</span> against the <span class="t-base">baseline</span> in steady state:
+Taking one policy question end to end shows what those four add up to. Say the question is what raising Ethiopia's effective corporate tax rate does to the economy. I install the `OG-ETH` calibration, which arrives with the country's own estimated defaults. I create a <span class="t-base">baseline</span>, which is a run of the economy as calibrated, with nothing changed. Then a <span class="t-reform">reform</span> on top of it, changing one parameter, `adjustment_factor_for_cit_receipts`, the factor that lifts the statutory corporate rate to the effective rate actually collected. Both runs solve, and the results page reports the <span class="t-reform">reform</span> against the <span class="t-base">baseline</span> in steady state:
 
 | Steady state | Reform against baseline |
 |---|---|
@@ -137,9 +137,9 @@ Every completed run stores a fingerprint of its inputs, so changing a parameter 
 
 The full project is four deliverables. A cross-platform baseline, <span class="t-model">OG-Core</span> on its own, coupled one-way runs where one model's output feeds the other, and a converging workflow that iterates both until the answers stop moving. My summer was the second one.
 
-Coupled mode is the next piece of UI work. You run <span class="t-model">CLEWS</span>, turn what the energy and land and water system did into the fiscal inputs <span class="t-model">OG-Core</span> understands, and run <span class="t-model">OG-Core</span> on top. Then the other direction. The hard part isn't the running, it's the translation, because the two models have different output shapes, different units and different time resolution. So the set of bridge variables has to be agreed first. After that it needs a guided run rather than one button, with the exchanged values shown at each handoff so an analyst can check them, and a combined view of the physical and fiscal side of the same scenario.
+Coupled mode is the next piece of UI work. It runs <span class="t-model">CLEWS</span>, turns what the energy and land and water system did into the fiscal inputs <span class="t-model">OG-Core</span> understands, and runs <span class="t-model">OG-Core</span> on top. Then the other direction. The hard part isn't the running, it's the translation, because the two models have different output shapes, different units and different time resolution. So the set of bridge variables has to be agreed first. After that it needs a guided run rather than one button, with the exchanged values shown at each handoff so an analyst can check them, and a combined view of the physical and fiscal side of the same scenario.
 
-Then converging, which is the same thing in a loop until the numbers settle. The design problem there is showing distance to tolerance per iteration, so you can see whether it's converging or stuck and stop it early. Packaging the app into a downloadable installer per platform is also still ahead.
+Then converging, which is the same thing in a loop until the numbers settle. The design problem there is showing distance to tolerance per iteration, so a stuck or oscillating run is obvious early enough to cancel it. Packaging the app into a downloadable installer per platform is also still ahead.
 
 ## Thanks
 
